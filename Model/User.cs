@@ -15,6 +15,11 @@ namespace Model
         protected int phoneNum;//מספר טלפון
         protected bool isManager;//?האם מנהל
         protected string email;//חחשבון אימייל
+        protected int child;//כמות ילדים
+        protected bool beliver;//האם אתה מאמין באלוהים?
+        protected string religion;//איזה דת?
+        protected string desiese;//חולה במחלה?
+        protected bool married;//האם נשוי?
         public string userName
         {
             get { return username; }
@@ -50,7 +55,33 @@ namespace Model
             get { return isManager; }
             set { isManager = value; }
         }
+        public int Child
+        {
+            get { return child; }
+            set { child = value; }
+        }
+        public string Religion
+        {
+            get { return religion; }
+            set { religion = value; }
+        }
+        public bool Beliver
+        {
+            get { return beliver; }
+            set { beliver = value; }
+        }
+        public string Desiese
+        {
+            get { return desiese; }
+            set { desiese = value; }
+        }
+        public bool Married
+        {
+            get { return married; }
+            set { married = value; }
+        }
     }
+    
     public class UserList : List<User>
     {
         //בנאי ברירת מחדל - אוסף ריק

@@ -20,6 +20,11 @@ namespace ViewModel
             user.Gender = bool.Parse(reader["gender"].ToString());
             user.BDay = DateTime.Parse(reader["bDay"].ToString());
             user.IsManager = bool.Parse(reader["isManager"].ToString());
+            user.Beliver = bool.Parse(reader["beliver"].ToString());
+            user.Married = bool.Parse(reader["married"].ToString());
+            user.Desiese = reader["desiese"].ToString();
+            user.Religion = reader["religion"].ToString();
+            user.Child = int.Parse(reader["child"].ToString());
             return user;
         }
 
