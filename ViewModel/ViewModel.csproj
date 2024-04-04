@@ -42,7 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseDB.cs" />
+    <Compile Include="CategoryDB.cs" />
+    <Compile Include="ChatDB.cs" />
+    <Compile Include="MessageDB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertiseDB.cs" />
     <Compile Include="ReligionDB.cs" />
     <Compile Include="UserDB.cs" />
   </ItemGroup>
@@ -56,6 +60,9 @@
     <Content Include="DB.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

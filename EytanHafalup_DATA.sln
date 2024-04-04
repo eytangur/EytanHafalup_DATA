@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModel", "ViewModel\ViewModel.csproj", "{40994729-BE1C-468D-A742-9F10FD46626B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Host", "Host\Host.csproj", "{8496DD37-338E-4B11-81E2-5AE5050AA39E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceModel", "ServiceModel\ServiceModel.csproj", "{134D22B5-D6E5-4F80-9C41-2A65FFB4BD21}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{40994729-BE1C-468D-A742-9F10FD46626B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40994729-BE1C-468D-A742-9F10FD46626B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40994729-BE1C-468D-A742-9F10FD46626B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8496DD37-338E-4B11-81E2-5AE5050AA39E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8496DD37-338E-4B11-81E2-5AE5050AA39E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8496DD37-338E-4B11-81E2-5AE5050AA39E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8496DD37-338E-4B11-81E2-5AE5050AA39E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{134D22B5-D6E5-4F80-9C41-2A65FFB4BD21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{134D22B5-D6E5-4F80-9C41-2A65FFB4BD21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{134D22B5-D6E5-4F80-9C41-2A65FFB4BD21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{134D22B5-D6E5-4F80-9C41-2A65FFB4BD21}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

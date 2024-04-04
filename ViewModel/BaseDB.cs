@@ -17,6 +17,7 @@ namespace ViewModel
 
         protected abstract BaseEntity NewEntity();
         protected abstract BaseEntity CreateModel(BaseEntity entity);
+        protected abstract void LoadParameters(BaseEntity entity);
 
         protected static string connectionString;
         public BaseDB()
@@ -62,12 +63,31 @@ namespace ViewModel
             string s = Environment.CurrentDirectory; //המיקום שבו רץ הפרויקט
             string[] sub = s.Split('\\'); //פירוק מחרוזת הכתובת למערך לפי תיקיות
 
-            int index = sub.Length - 2; //חזרה אחורה 2 תיקיות
+            int index = sub.Length - 3; //חזרה אחורה 3 תיקיות
             sub[index] = "ViewModel";     //שינוי התיקיה לתיקיה המתאימה
             Array.Resize(ref sub, index + 1); //תיקון של אורך המערך, לאורך המתאים לתיקייה
 
             s = String.Join("\\", sub);  //חיבור מחדש של המערך עם / מפריד אישי 
             return s;
+        }
+        public int ExecuteCRUD() //עבודה וניהול התקשורת מול המסד
+        {
+            int records = 0;
+            try
+            {
+                connection.Open(); //פתיחת תקשורת עם המסד
+                records = command.ExecuteNonQuery(); //ביצוע השאילתה                
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine(ex.Message);
+            }
+            finally
+            {
+                if (connection.State == ConnectionState.Open)
+                    connection.Close();
+            }
+            return records;
         }
     }
 }
