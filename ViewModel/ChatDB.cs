@@ -29,7 +29,7 @@ namespace ViewModel
             Chat chat = entity as Chat;
             command.Parameters.Clear();
             command.Parameters.AddWithValue("@approved1", chat.Approve1);
-            command.Parameters.AddWithValue("@approved2", chat.Approve1);
+            command.Parameters.AddWithValue("@approved2", chat.Approve2);
             command.Parameters.AddWithValue("@user1", chat.User1.Id);
             command.Parameters.AddWithValue("@user2", chat.User2.Id);
             command.Parameters.AddWithValue("@id", chat.Id);
@@ -43,6 +43,12 @@ namespace ViewModel
         public ChatList SelectChatByUser(User user)
         {
             command.CommandText = $"SELECT * FROM TBLChat WHERE (user1={user.Id} OR user2={user.Id}) AND (approved1=true AND approved2=true)";
+            ChatList list = new ChatList(ExecuteCommand());
+            return list;
+        }
+        public ChatList SelectChatByUserToApprove(User user)
+        {
+            command.CommandText = $"SELECT * FROM TBLChat WHERE (user1={user.Id} AND approved1=false) OR  (user2={user.Id} AND approved2=false)";
             ChatList list = new ChatList(ExecuteCommand());
             return list;
         }

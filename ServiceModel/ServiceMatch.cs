@@ -55,6 +55,14 @@ namespace ServiceModel
             UserDB userDB = new UserDB();
             return userDB.DeleteUserProp(user, propertise);
         }
+        public void ClearUserPropertise(User user)
+        {
+            UserDB userDB = new UserDB();
+            foreach (Propertise p in user.Propertises)
+            {
+                DeleteUserPropertise(user,p);                     
+            }
+        }
         public UserList FindMatch(User user)
         {
             UserList users = new UserList();
@@ -190,7 +198,12 @@ namespace ServiceModel
             ChatDB chatDB = new ChatDB();
             return chatDB.SelectChatByUser(user);
         }
-
+        public ChatList SelectChatByUserToApprove(User user)
+        {
+            ChatDB chatDB = new ChatDB();
+            return chatDB.SelectChatByUserToApprove(user);
+        }
+        
         #endregion
         #region Messages
        public  int InsertMessage(Model.Message message)

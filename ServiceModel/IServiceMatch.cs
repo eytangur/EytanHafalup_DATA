@@ -21,6 +21,7 @@ namespace ServiceModel
 
         [OperationContract] int InsertUserPropertise(User user, Propertise propertise);
         [OperationContract] int DeleteUserPropertise(User user, Propertise propertise);
+        [OperationContract] void ClearUserPropertise(User user);
 
         [OperationContract] UserList FindMatch(User user);
 
@@ -55,6 +56,7 @@ namespace ServiceModel
         [OperationContract] int DeletetChat(Chat chat);
         [OperationContract] ChatList SelectAllChats();
         [OperationContract] ChatList SelectChatsByUser(User user);
+        [OperationContract] ChatList SelectChatByUserToApprove(User user);
 
         #endregion
         #region Messages
