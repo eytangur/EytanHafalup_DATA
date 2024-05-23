@@ -1,38 +1,52 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="ViewModel.UserDB">
-    <Position X="5.75" Y="5.5" Width="1.5" />
+    <Position X="11" Y="7" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAEAAACAAAAAAAAAAAAAAAgEAAAAAAAAQAAACEAA=</HashCode>
+      <HashCode>AAQAAEAAAKAAAAAAAAAAAAAAAgEAAAoAAIAQAAACEAA=</HashCode>
       <FileName>UserDB.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ViewModel.BaseDB">
-    <Position X="9" Y="1.5" Width="1.5" />
+    <Position X="14.25" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AIAAAAAAAAAAAApAAAABAAAAAgQAAAAAAAAAAAASEAA=</HashCode>
       <FileName>BaseDB.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ViewModel.CategoryDB">
-    <Position X="12.25" Y="5.5" Width="1.5" />
+    <Position X="17.5" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAEAAAAAAAAAAAAAAAAAAAgEAAAAAAAAAAAACMAA=</HashCode>
       <FileName>CategoryDB.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ViewModel.PropertiseDB">
-    <Position X="7.75" Y="5.5" Width="1.5" />
+    <Position X="13" Y="7" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAEAAAAEAAAAAAAAAAAAAAgEAAAAAAAAAAAACEAA=</HashCode>
+      <HashCode>AAQAAEAgAAEAAAAAAAAAAAAAAgEAAAAAAAAAIAACEAA=</HashCode>
       <FileName>PropertiseDB.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ViewModel.ReligionDB">
-    <Position X="10" Y="5.5" Width="1.5" />
+    <Position X="15.25" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAEAAAAAAAAAAAAAAAAAAAgEAACAAAAAAAAACEAA=</HashCode>
       <FileName>ReligionDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ViewModel.ChatDB">
+    <Position X="8.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAACAAAAAAAAAAACAAAgEAAAAAAAAAAAAGEAA=</HashCode>
+      <FileName>ChatDB.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ViewModel.MessageDB">
+    <Position X="20" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAAACAAAAAAAAAAAAAAAgEBAAAAAAAAAAACEAA=</HashCode>
+      <FileName>MessageDB.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

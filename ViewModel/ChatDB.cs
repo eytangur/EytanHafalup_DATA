@@ -23,7 +23,7 @@ namespace ViewModel
             chat.User1 = userDB.SelectById(int.Parse(reader["user1"].ToString()));
             chat.User2 = userDB.SelectById(int.Parse(reader["user2"].ToString()));
             return chat;
-        }        
+        }
         protected override void LoadParameters(BaseEntity entity)
         {
             Chat chat = entity as Chat;
@@ -48,7 +48,15 @@ namespace ViewModel
         }
         public ChatList SelectChatByUserToApprove(User user)
         {
-            command.CommandText = $"SELECT * FROM TBLChat WHERE (user1={user.Id} AND approved1=false) OR  (user2={user.Id} AND approved2=false)";
+            //שיחות שממתינו לאישור של משתמש
+            command.CommandText = $"SELECT * FROM TBLChat WHERE (user1={user.Id} AND approved1=false) OR (user2={user.Id} AND approved2=false)";
+            ChatList list = new ChatList(ExecuteCommand());
+            return list;
+        }
+        public ChatList SelectChatMeWaitingToApprove(User user)
+        {
+            //משתמש ביקש לשוחח ועדיין לא אושר על ידי המשתמש השני
+            command.CommandText = $"SELECT * FROM TBLChat WHERE (user1={user.Id} AND approved2=false)";
             ChatList list = new ChatList(ExecuteCommand());
             return list;
         }
@@ -77,8 +85,7 @@ namespace ViewModel
         }
         public int Delete(Chat chat)
         {
-            command.CommandText = "DELETE FROM TBLChat WHERE (id = @id) ";
-            LoadParameters(chat);
+            command.CommandText = $"DELETE FROM TBLChat WHERE (id = {chat.Id}) ";
             return ExecuteCRUD();
         }
     }

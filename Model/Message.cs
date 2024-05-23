@@ -12,7 +12,7 @@ namespace Model
     {
         protected User sender;
         protected Chat chat;
-        protected string text;
+        protected string text; 
         protected DateTime when;
         [DataMember]
         public User Sender

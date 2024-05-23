@@ -203,10 +203,14 @@ namespace ServiceModel
             ChatDB chatDB = new ChatDB();
             return chatDB.SelectChatByUserToApprove(user);
         }
-        
+        public ChatList SelectChatMeWaitingToApprove(User user)
+        {
+            ChatDB chatDB = new ChatDB();
+            return chatDB.SelectChatMeWaitingToApprove(user);
+        }
         #endregion
         #region Messages
-       public  int InsertMessage(Model.Message message)
+        public  int InsertMessage(Model.Message message)
         {
             MessageDB messageDB = new MessageDB();
             return messageDB.Insert(message);

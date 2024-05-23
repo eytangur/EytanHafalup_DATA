@@ -10,7 +10,7 @@ namespace Model
     [DataContract]
     public class Chat : BaseEntity
     {
-        protected User user1;
+        protected User user1; 
         protected User user2;
         protected bool approve1;
         protected bool approve2;

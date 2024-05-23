@@ -51,8 +51,5 @@
     <Compile Include="Religion.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagramModel.cd" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
